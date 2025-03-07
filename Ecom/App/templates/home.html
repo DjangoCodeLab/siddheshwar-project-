@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!-- <div class="container d-flex">
+
+  <div class="container d-flex col-5 card-group">
+        <div class="col">
+          <div class="card h-30">
+            <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-30">
+            <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-30">
+            <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="container d-flex col-5">
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex col-5">
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-30">
+        <img src="https://getillustrations.b-cdn.net//packs/scranton-character-illustrations-pack/scenes/_1x/e-commerce%20_%20woman,%20discount,%20sale,%20shopping,%20ecommerce,%20credit%20card_demo.png" class="img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="row row-cols-2 row-cols-md-2 g-2">
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+     
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+     
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+     
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+     
+    </div>
+  </div>
+
+ 
+</div> -->
+ 
+<h1>Hello</h1>
+{% for category in categories %}
+{{category}}
+{% for product  in category.cat.all %}
+{{product}}
+  
+{% endfor %}
+{% endfor %}
+
+<div class="container-fluid">
+  <div class="row flex-nowrap overflow-auto">
+    {% for category in categories %}
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="card-title">{{category}}</h5>
+          <a href="#" class="btn btn-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          {% for product in category.cat.all %}
+          {% if forloop.counter <= 4 %}
+          <li class="list-group-item">
+            <div class="row g-2">
+              <div class="col-6 text-center">
+                <img src="https://via.placeholder.com/100x80" class="img-fluid" alt="Smart Watches">
+                <h6 class="card-title">Smart Watches</h6>
+                <p class="card-text"><span class="badge off-badge">Min. 40% Off</span></p>
+              </div>
+              <div class="col-6 text-center">
+                <img src="https://via.placeholder.com/100x80" class="img-fluid" alt="Casual Shirts">
+                <h6 class="card-title">Casual Shirts</h6>
+                <p class="card-text"><span class="badge off-badge">Min. 50% Off</span></p>
+              </div>
+            </div>
+          </li>
+            
+          {% endif %} 
+          {% endfor %}
+          
+         
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+   
+            
+  </div>
+</div>
+
+
+
+
+{% endblock body %}
